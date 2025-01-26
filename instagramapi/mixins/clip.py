@@ -6,11 +6,11 @@ from pathlib import Path
 from typing import Dict, List
 from uuid import uuid4
 
-from instagrapi import config
-from instagrapi.exceptions import ClientError, ClipConfigureError, ClipNotUpload
-from instagrapi.extractors import extract_media_v1
-from instagrapi.types import Location, Media, Track, Usertag
-from instagrapi.utils import date_time_original
+from instagramapi import config
+from instagramapi.exceptions import ClientError, ClipConfigureError, ClipNotUpload
+from instagramapi.extractors import extract_media_v1
+from instagramapi.types import Location, Media, Track, Usertag
+from instagramapi.utils import date_time_original
 
 try:
     from PIL import Image

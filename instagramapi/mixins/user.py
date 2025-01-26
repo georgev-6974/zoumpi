@@ -2,16 +2,16 @@ from copy import deepcopy
 from json.decoder import JSONDecodeError
 from typing import Dict, List, Tuple
 
-from instagrapi.exceptions import (
+from instagramapi.exceptions import (
     ClientError,
     ClientJSONDecodeError,
     ClientLoginRequired,
     ClientNotFoundError,
     UserNotFound,
 )
-from instagrapi.extractors import extract_user_gql, extract_user_short, extract_user_v1
-from instagrapi.types import Relationship, RelationshipShort, User, UserShort
-from instagrapi.utils import json_value
+from instagramapi.extractors import extract_user_gql, extract_user_short, extract_user_v1
+from instagramapi.types import Relationship, RelationshipShort, User, UserShort
+from instagramapi.utils import json_value
 
 MAX_USER_COUNT = 200
 

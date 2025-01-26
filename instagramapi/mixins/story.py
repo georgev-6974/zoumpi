@@ -5,14 +5,14 @@ from pathlib import Path
 from typing import List
 from urllib.parse import urlparse
 
-from instagrapi import config
-from instagrapi.exceptions import ClientNotFoundError, StoryNotFound, UserNotFound
-from instagrapi.extractors import (
+from instagramapi import config
+from instagramapi.exceptions import ClientNotFoundError, StoryNotFound, UserNotFound
+from instagramapi.extractors import (
     extract_story_gql,
     extract_story_v1,
     extract_user_short,
 )
-from instagrapi.types import Story, UserShort
+from instagramapi.types import Story, UserShort
 
 
 class StoryMixin:
@@ -290,7 +290,7 @@ class StoryMixin:
         fname = urlparse(url).path.rsplit("/", 1)[1].strip()
         assert fname, (
             """The URL must contain the path to the file (mp4 or jpg).\n"""
-            """Read the documentation https://subzeroid.github.io/instagrapi/usage-guide/story.html"""
+            """Read the documentation https://subzeroid.github.io/instagramapi/usage-guide/story.html"""
         )
         filename = "%s.%s" % (filename, fname.rsplit(".", 1)[1]) if filename else fname
         path = Path(folder) / filename

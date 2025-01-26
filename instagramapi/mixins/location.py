@@ -2,13 +2,13 @@ import base64
 import json
 from typing import List, Tuple
 
-from instagrapi.exceptions import (
+from instagramapi.exceptions import (
     ClientNotFoundError,
     LocationNotFound,
     WrongCursorError,
 )
-from instagrapi.extractors import extract_guide_v1, extract_location, extract_media_v1
-from instagrapi.types import Guide, Location, Media
+from instagramapi.extractors import extract_guide_v1, extract_location, extract_media_v1
+from instagramapi.types import Guide, Location, Media
 
 tab_keys_a1 = ("edge_location_to_top_posts", "edge_location_to_media")
 tab_keys_v1 = ("ranked", "recent")
@@ -178,7 +178,7 @@ class LocationMixin:
             location = self.location_info_a1(location_pk)
         except Exception:
             # Users do not understand the output of such information and create bug reports
-            # such this - https://github.com/subzeroid/instagrapi/issues/364
+            # such this - https://github.com/subzeroid/instagramapi/issues/364
             # if not isinstance(e, ClientError):
             #     self.logger.exception(e)
             location = self.location_info_v1(location_pk)
@@ -425,7 +425,7 @@ class LocationMixin:
             return self.location_medias_top_a1(location_pk, amount, sleep)
         except Exception:
             # Users do not understand the output of such information and create bug reports
-            # such this - https://github.com/subzeroid/instagrapi/issues/364
+            # such this - https://github.com/subzeroid/instagramapi/issues/364
             # if not isinstance(e, ClientError):
             #     self.logger.exception(e)
             return self.location_medias_top_v1(location_pk, amount)
@@ -498,7 +498,7 @@ class LocationMixin:
             return self.location_medias_recent_a1(location_pk, amount, sleep)
         except Exception:
             # Users do not understand the output of such information and create bug reports
-            # such this - https://github.com/subzeroid/instagrapi/issues/364
+            # such this - https://github.com/subzeroid/instagramapi/issues/364
             # if not isinstance(e, ClientError):
             #     self.logger.exception(e)
             return self.location_medias_recent_v1(location_pk, amount)

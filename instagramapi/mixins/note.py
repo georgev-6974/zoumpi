@@ -1,6 +1,6 @@
 from typing import List
 
-from instagrapi.types import Note
+from instagramapi.types import Note
 
 
 class NoteMixin:

@@ -13,8 +13,8 @@ from uuid import uuid4
 import requests
 from pydantic import ValidationError
 
-from instagrapi import config
-from instagrapi.exceptions import (
+from instagramapi import config
+from instagramapi.exceptions import (
     BadCredentials,
     ClientThrottledError,
     PleaseWaitFewMinutes,
@@ -22,9 +22,9 @@ from instagrapi.exceptions import (
     ReloginAttemptExceeded,
     TwoFactorRequired,
 )
-from instagrapi.utils import dumps, gen_token, generate_jazoest
+from instagramapi.utils import dumps, gen_token, generate_jazoest
 
-# from instagrapi.zones import CET
+# from instagramapi.zones import CET
 TIMELINE_FEED_REASONS = (
     "cold_start_fetch",
     "warm_start_fetch",

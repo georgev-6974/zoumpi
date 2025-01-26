@@ -11,7 +11,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
-from instagrapi.exceptions import (
+from instagramapi.exceptions import (
     ClientBadRequestError,
     ClientConnectionError,
     ClientError,
@@ -24,7 +24,7 @@ from instagrapi.exceptions import (
     ClientThrottledError,
     ClientUnauthorizedError,
 )
-from instagrapi.utils import random_delay
+from instagramapi.utils import random_delay
 
 
 class PublicRequestMixin:

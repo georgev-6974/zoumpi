@@ -1,4 +1,4 @@
-from instagrapi.utils import dumps
+from instagramapi.utils import dumps
 
 
 class BloksMixin:

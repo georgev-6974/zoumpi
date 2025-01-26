@@ -39,7 +39,7 @@ class InstagramIdCodec:
         return num
 
 
-class InstagrapiJSONEncoder(json.JSONEncoder):
+class instagramapiJSONEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, enum.Enum):
             return obj.value
@@ -91,7 +91,7 @@ def gen_password(size=10):
 
 def dumps(data):
     """Json dumps format as required Instagram"""
-    return InstagrapiJSONEncoder(separators=(",", ":")).encode(data)
+    return instagramapiJSONEncoder(separators=(",", ":")).encode(data)
 
 
 def generate_jazoest(symbols: str) -> str:

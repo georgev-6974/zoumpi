@@ -1,7 +1,7 @@
 import base64
 from urllib.parse import urlparse
 
-from instagrapi.types import Share
+from instagramapi.types import Share
 
 
 class ShareMixin:

@@ -8,8 +8,8 @@ import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
-from instagrapi import config
-from instagrapi.exceptions import (
+from instagramapi import config
+from instagramapi.exceptions import (
     BadPassword,
     ChallengeRequired,
     ClientBadRequestError,
@@ -35,7 +35,7 @@ from instagrapi.exceptions import (
     UserNotFound,
     VideoTooLongException,
 )
-from instagrapi.utils import dumps, generate_signature, random_delay
+from instagramapi.utils import dumps, generate_signature, random_delay
 
 
 def manual_input_code(self, username: str, choice=None):

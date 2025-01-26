@@ -2,20 +2,20 @@ import base64
 import json
 from typing import List, Tuple
 
-from instagrapi.exceptions import (
+from instagramapi.exceptions import (
     ClientError,
     ClientLoginRequired,
     ClientUnauthorizedError,
     HashtagNotFound,
     WrongCursorError,
 )
-from instagrapi.extractors import (
+from instagramapi.extractors import (
     extract_hashtag_gql,
     extract_hashtag_v1,
     extract_media_v1,
 )
-from instagrapi.types import Hashtag, Media
-from instagrapi.utils import dumps
+from instagramapi.types import Hashtag, Media
+from instagramapi.utils import dumps
 
 
 class HashtagMixin:
@@ -117,7 +117,7 @@ class HashtagMixin:
             hashtag = self.hashtag_info_a1(name)
         except Exception:
             # Users do not understand the output of such information and create bug reports
-            # such this - https://github.com/subzeroid/instagrapi/issues/364
+            # such this - https://github.com/subzeroid/instagramapi/issues/364
             # if not isinstance(e, ClientError):
             #     self.logger.exception(e)
             hashtag = self.hashtag_info_v1(name)

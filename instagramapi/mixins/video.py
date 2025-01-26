@@ -7,15 +7,15 @@ from uuid import uuid4
 
 import requests
 
-from instagrapi import config
-from instagrapi.exceptions import (
+from instagramapi import config
+from instagramapi.exceptions import (
     VideoConfigureError,
     VideoConfigureStoryError,
     VideoNotDownload,
     VideoNotUpload,
 )
-from instagrapi.extractors import extract_direct_message, extract_media_v1
-from instagrapi.types import (
+from instagramapi.extractors import extract_direct_message, extract_media_v1
+from instagramapi.types import (
     DirectMessage,
     Location,
     Media,
@@ -28,7 +28,7 @@ from instagrapi.types import (
     StorySticker,
     Usertag,
 )
-from instagrapi.utils import date_time_original, dumps
+from instagramapi.utils import date_time_original, dumps
 
 
 class DownloadVideoMixin:

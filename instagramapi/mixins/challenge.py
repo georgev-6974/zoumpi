@@ -7,7 +7,7 @@ from typing import Dict
 
 import requests
 
-from instagrapi.exceptions import (
+from instagramapi.exceptions import (
     ChallengeError,
     ChallengeRedirection,
     ChallengeRequired,

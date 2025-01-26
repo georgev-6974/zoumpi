@@ -6,22 +6,22 @@ from datetime import datetime
 from typing import Dict, List, Tuple
 from urllib.parse import urlparse
 
-from instagrapi.exceptions import (
+from instagramapi.exceptions import (
     ClientError,
     ClientLoginRequired,
     ClientNotFoundError,
     MediaNotFound,
     PrivateError,
 )
-from instagrapi.extractors import (
+from instagramapi.extractors import (
     extract_location,
     extract_media_gql,
     extract_media_oembed,
     extract_media_v1,
     extract_user_short,
 )
-from instagrapi.types import Location, Media, UserShort, Usertag
-from instagrapi.utils import InstagramIdCodec, json_value
+from instagramapi.types import Location, Media, UserShort, Usertag
+from instagramapi.utils import InstagramIdCodec, json_value
 
 
 class MediaMixin:
