@@ -64,7 +64,7 @@ async def home():
 
                     <div class="text">
 
-                        <h1>Plhrofories malaka apo Zoobie</h1>
+                        <h1>Plhrofories malaka apo Zoumpi</h1>
                         <p>IP: user_ip</p>
                         <p>User-Agent: user_agent</p>
                         <p>Full headers: request.headers</p>
