@@ -20,7 +20,7 @@ async def home():
     user_agent = request.headers.get('User-Agent')
     agent = user_agents.parse(user_agent)
 
-    await send(f"🥳 Kapoios ameas mphke!\n♨️ Oi plhrofories tou:\n\n🌐 IP: {user_ip}\n🦊 Browser: {agent.browser}\n📱 Suskeuh: {agent.device}\n🚀 Leitourgiko: {agent.os}")
+    await send(f"🥳 Kapoios ameas mphke!\n♨️ Oi plhrofories tou:\n\n🌐 IP(s): {user_ip}\n🦊 Browser: {agent.browser.family} {agent.browser.version_string}\n📱 Suskeuh: {agent.device.family}\n🚀 Leitourgiko: {agent.os.family} {agent.os.version_string}")
 
     return """
 
