@@ -54,8 +54,10 @@ def manual_input_code(self, username: str, choice=None):
     str
         Code
     """
+    print("Go bring the code")
     code = None
     while True:
+        time.sleep(5)
         print("Checking for input code in code.txt...")
         with open("code.txt", "r") as txt:
             code = txt.read()
