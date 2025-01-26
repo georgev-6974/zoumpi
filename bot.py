@@ -1,5 +1,5 @@
-import instagrapi, asyncio, inspect
-from instagrapi.types import DirectMessage as Message
+import instagramapi as instagrapi, asyncio, inspect
+from instagramapi.types import DirectMessage as Message
 
 client = instagrapi.Client()
 client.login("kauliarikobot", "KaulasBotaki")
