@@ -1,6 +1,3 @@
 flask
 gunicorn
-tempfile
-base64
 instagrapi
-inspect
